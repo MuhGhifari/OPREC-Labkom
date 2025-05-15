@@ -27,18 +27,24 @@ body {
 .col-12 { flex: 0 0 100%;   max-width: 100%; }
 
 .container {
-    max-width: 1200px;
+    margin: 0;
+    padding: 0;
 }
 
 section {
     height: 100vh;
+    overflow: hidden;
 }
 
 /* Page 01 */
 
 .landing {
-    padding: 50px 50px 0;
+    padding: 0 50px;
     background-color: #191919;
+}
+
+.cli {
+    margin: 50px 0;
     font-family: 'SourceCodePro';
     color: #AEFF00;
     font-size: 23px;
@@ -83,6 +89,12 @@ section {
 }
 
 #QuoteCLI {
+  position: absolute;
+  justify-content: center;
+  bottom: 50px;
+}
+
+#QuoteCLI p {
     text-align: center;
     font-size: 16px;
     line-height: 1.2;
