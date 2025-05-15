@@ -39,12 +39,12 @@ section {
 /* Page 01 */
 
 .landing {
-    padding: 0 50px;
+    padding: 0;
     background-color: #191919;
 }
 
 .cli {
-    margin: 50px 0;
+    margin: 50px 50px;
     font-family: 'SourceCodePro';
     color: #AEFF00;
     font-size: 23px;
