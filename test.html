@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #container {
+      width: 70%; /* You can set this to any fixed or percentage width */
+      border: 1px solid black;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    #line {
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <div id="line"></div>
+</div>
+
+<script>
+  function fillLineWithEquals() {
+    const container = document.getElementById('container');
+    const line = document.getElementById('cmdBorder');
+
+    // Measure width of one '=' character in monospace font
+    const testChar = document.createElement('span');
+    testChar.style.fontFamily = 'monospace';
+    testChar.style.visibility = 'hidden';
+    testChar.textContent = '=';
+    document.body.appendChild(testChar);
+
+    const charWidth = testChar.getBoundingClientRect().width;
+    const containerWidth = container.getBoundingClientRect().width;
+    const count = Math.floor(containerWidth / charWidth);
+
+    document.body.removeChild(testChar);
+    line.textContent = '='.repeat(count);
+  }
+
+  // Initial fill
+  fillLineWithEquals();
+
+  // Optional: update on window resize
+  window.addEventListener('resize', fillLineWithEquals);
+</script>
+
+</body>
+</html>
