@@ -180,13 +180,13 @@ p {
 
     #Display {
         width: 90vw;
-        max-width: 314px;
+        max-width: 344px;
         height: auto;
     }
 
     #Toa {
         width: 90vw;
-        max-width: 280px;
+        max-width: 300px;
         height: auto;
         margin-top: 10rem;
     }
