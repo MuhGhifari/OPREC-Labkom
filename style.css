@@ -43,9 +43,12 @@ p {
     src: url('assets/fonts/GeneralSans-Variable.ttf');
 }
 
+.full-screen {
+    height: calc(var(--vh, 1vh) * 100);
+}
+
 .container {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -143,7 +146,7 @@ p {
     width: 90vw;
     max-width: 354px;
     height: auto;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 #Display {
