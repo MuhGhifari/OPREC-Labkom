@@ -117,7 +117,7 @@ p {
     align-items: center;
     font-family: 'Coolvetica';
     color: #fff;
-    height: 54px;
+    height: 40px;
 }
 
 .header h1 {
@@ -146,17 +146,19 @@ p {
     max-width: 354px;
     height: auto;
     margin: 1rem 0;
+    display: flex;
+    justify-content: center;
 }
 
 #Display {
     position: absolute;
-    width: 354px;
+    width: 340px;
     height: auto;
 }
 
 #Toa {
     position: absolute;
-    width: 352px;
+    width: 340px;
     height: auto;
     margin-top: 10rem;
 }
@@ -185,7 +187,7 @@ p {
     display: block;
     text-align: center;
     margin-top: auto;
-    margin-bottom: 54px;
+    margin-bottom: 30px;
 }
 
 .scroll img {
