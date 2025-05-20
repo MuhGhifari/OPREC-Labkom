@@ -140,7 +140,7 @@ p {
 }
 
 .display-image {
-    height: 80vh;
+    height: 80dvh;
     position: relative;
     display: flex;
     justify-content: center;
