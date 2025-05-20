@@ -25,7 +25,7 @@ p {
 
 @font-face {
     font-family: 'Coolvetica';
-    src: url('assets/fonts/Coolvetica.ttf') format('openType');
+    src: url('assets/fonts/Coolvetica.otf');
 }
 
 @font-face {
