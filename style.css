@@ -151,15 +151,15 @@ p {
 
 #Display {
     position: absolute;
-    width: 300px;
+    width: 354px;
     height: auto;
 }
 
 #Toa {
     position: absolute;
-    width: 300px;
+    width: 320px;
     height: auto;
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 .scroll {
