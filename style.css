@@ -101,7 +101,6 @@ p {
     box-sizing: border-box;
     background-color: #581F2B;
     color: #fff;
-    min-height: 100vh;
     padding: 14px 5vw 0 5vw;
     display: flex;
     flex-direction: column;
@@ -200,7 +199,6 @@ p {
 .about {
     box-sizing: border-box;
     background-color: #FFFFFF;
-    min-height: 100vh;
     padding: 14px 5vw 0 5vw;
     display: flex;
     flex-direction: column;
