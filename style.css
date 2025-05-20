@@ -25,7 +25,7 @@ p {
 
 @font-face {
     font-family: 'Coolvetica';
-    src: url('assets/fonts/Coolvetica Rg.ttf');
+    src: url('assets/fonts/Coolvetica.ttf');
 }
 
 @font-face {
@@ -105,7 +105,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Coolvetica';
+    font-family: 'Helvetica';
     color: #fff;
     height: 54px;
 }
