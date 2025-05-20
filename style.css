@@ -176,7 +176,7 @@ p {
     box-sizing: border-box;
     display: block;
     text-align: center;
-    margin-top: auto;
+    margin-top: 0;
     margin-bottom: 20px;
     font-size: 1rem;
 }
