@@ -1,31 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Maroon</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <section class="landing">
-            <div class="cli">
-                <p>Program Dijalankan...</p>
-                <div class="cmdBorder"></div>
-                <p id="MenuTitle">Menu</p>
-                <div class="cmdBorder"></div>
-                <a href="#" class="menu inactive">> (Coming Soon)</a> 
-                <a href="https://simak.unpak.ac.id" class="menu">> SIMAK</a> 
-                <a href="https://www.canva.com/id_id/contoh/EAF6r5QjBpA-putih-hitam-minimalis-maskulin-profesional-cv-resume-template/" class="menu">> Template CV</a> 
-                <a href="https://drive.google.com/file/d/16wIKyh6XmlI32-7t7V1-imxgo9g7-t8m/view?usp=sharing" class="menu">> Surat Izin Orangtua</a> 
-                <a href="https://forms.gle/UDm44bzkppRWNN1c8" class="menu">> Apply Now</a>
-                <div id="QuoteCLI">
-                    <p>" Bakat boleh bernyala-nyala "<br>tapi klo ga daftar Maroon<br>kapan bersinarnya?</p>
-                </div>
-            </div>
-        </section>
-    </div>
 
-    <script src="script.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Daftar Maroon</title>
+	<style>
+		html {
+			overflow-x: hidden;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		}
+
+		@font-face {
+			font-family: 'SourceCodePro';
+			src: url('assets/fonts/SourceCodePro.ttf');
+		}
+
+		.container {
+			margin: 0;
+			padding: 0;
+		}
+
+		section {
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		.landing {
+			padding: 0;
+			box-sizing: border-box;
+			background-color: #191919;
+		}
+
+		.cli {
+			margin: 50px 50px;
+			font-family: 'SourceCodePro';
+			color: #AEFF00;
+			font-size: 23px;
+			line-height: 0.5;
+		}
+
+		.cmdBorder {
+			white-space: nowrap;
+			overflow: hidden;
+			margin-bottom: 10px;
+		}
+
+		#MenuTitle {
+			text-align: center;
+		}
+
+		.menu {
+			padding: 0;
+			height: 45px;
+			display: flex;
+			align-items: center;
+		}
+
+		.menu {
+			text-decoration: none;
+			color: #AEFF00;
+		}
+
+		.menu:hover {
+			color: #191919;
+			background-color: #AEFF00;
+		}
+
+		.inactive {
+			color: #ffffff;
+			background-color: #ff0000;
+		}
+
+		.inactive:hover {
+			color: #ffffff;
+			background-color: #ff0000;
+		}
+
+		#QuoteCLI {
+			position: absolute;
+			justify-content: center;
+			bottom: 50px;
+		}
+
+		#QuoteCLI p {
+			text-align: center;
+			font-size: 16px;
+			line-height: 1.2;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<section class="landing">
+			<div class="cli">
+				<p>Program Dijalankan...</p>
+				<div class="cmdBorder"></div>
+				<p id="MenuTitle">Menu</p>
+				<div class="cmdBorder"></div>
+				<a href="info.html" class="menu">> Tentang Maroon</a>
+				<a href="https://simak.unpak.ac.id" class="menu">> SIMAK</a>
+				<a href="https://www.canva.com/id_id/contoh/EAF6r5QjBpA-putih-hitam-minimalis-maskulin-profesional-cv-resume-template/"
+					class="menu">> Template CV</a>
+				<a href="https://drive.google.com/file/d/16wIKyh6XmlI32-7t7V1-imxgo9g7-t8m/view?usp=sharing"
+					class="menu">> Surat Izin Orangtua</a>
+				<a href="https://forms.gle/UDm44bzkppRWNN1c8" class="menu">> Apply Now</a>
+				<div id="QuoteCLI">
+					<p>" Bakat boleh bernyala-nyala "<br>tapi klo ga daftar Maroon<br>kapan bersinarnya?</p>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script>
+		function fillLineWithEquals() {
+			const container = document.getElementById('container') || document.querySelector('.landing');
+			const lines = document.querySelectorAll('.cmdBorder');
+
+			// Measure width of one '=' character in monospace font
+			const testChar = document.createElement('span');
+			testChar.style.fontFamily = 'Source Code Pro';
+			testChar.style.visibility = 'hidden';
+			testChar.textContent = '=';
+			document.body.appendChild(testChar);
+
+			const charWidth = testChar.getBoundingClientRect().width;
+			const containerWidth = container.getBoundingClientRect().width;
+			const count = Math.floor(containerWidth / charWidth);
+
+			document.body.removeChild(testChar);
+
+			lines.forEach(line => {
+				line.textContent = '='.repeat(count);
+			});
+		}
+
+		// Initial fill
+		fillLineWithEquals();
+
+		// Optional: update on window resize
+		window.addEventListener('resize', fillLineWithEquals);
+
+		// --- Loading animation logic ---
+		document.addEventListener('DOMContentLoaded', function () {
+			const cli = document.querySelector('.cli');
+			const loadingText = document.createElement('p');
+			loadingText.id = 'loadingText';
+			loadingText.textContent = 'Program Dijalankan';
+			const dots = ['', '.', '..', '...'];
+			let dotIndex = 0;
+			let interval;
+			// Hide all CLI children except loadingText
+			const children = Array.from(cli.children);
+			children.forEach((child, idx) => {
+				if (idx !== 0) child.style.display = 'none';
+			});
+			cli.replaceChild(loadingText, cli.children[0]);
+
+			function startLoadingAnimation() {
+				interval = setInterval(() => {
+					loadingText.textContent = 'Program Dijalankan' + dots[dotIndex];
+					dotIndex = (dotIndex + 1) % dots.length;
+				}, 400);
+			}
+
+			function stopLoadingAnimationAndShowRest() {
+				clearInterval(interval);
+				// Remove loadingText and show the rest
+				cli.removeChild(loadingText);
+				children.forEach((child, idx) => {
+					if (idx !== 0) child.style.display = '';
+				});
+			}
+
+			startLoadingAnimation();
+			setTimeout(stopLoadingAnimationAndShowRest, 2200); // ~2 seconds
+		});
+	</script>
 </body>
+
 </html>
