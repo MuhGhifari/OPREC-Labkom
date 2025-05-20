@@ -152,13 +152,13 @@ p {
 
 #Display {
     position: absolute;
-    width: 340px;
+    width: 300px;
     height: auto;
 }
 
 #Toa {
     position: absolute;
-    width: 340px;
+    width: 300px;
     height: auto;
     margin-top: 10rem;
 }
@@ -188,6 +188,7 @@ p {
     text-align: center;
     margin-top: auto;
     margin-bottom: 30px;
+    font-size: 1rem;
 }
 
 .scroll img {
