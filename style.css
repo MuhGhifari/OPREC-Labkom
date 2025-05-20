@@ -117,7 +117,6 @@ p {
     align-items: center;
     font-family: 'Coolvetica';
     color: #fff;
-    height: 40px;
 }
 
 .header h1 {
@@ -163,23 +162,6 @@ p {
     margin-top: 10rem;
 }
 
-/* #Display {
-    width: 90vw;
-    max-width: 354px;
-    height: auto;
-    aspect-ratio: 354 / 205;
-    position: absolute;
-}
-
-#Toa {
-    width: 90vw;
-    max-width: 352px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    margin-bottom: 1.5rem;
-    position: absolute;
-} */
-
 .scroll {
     font-family: 'SourceCodePro';
     width: 100%;
@@ -187,7 +169,7 @@ p {
     display: block;
     text-align: center;
     margin-top: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 1rem;
 }
 
