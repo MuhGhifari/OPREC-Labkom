@@ -140,7 +140,7 @@ p {
 }
 
 .display-image {
-    height: 80dvh;
+    height: 70dvh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -178,7 +178,7 @@ p {
     text-align: center;
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .scroll img {
