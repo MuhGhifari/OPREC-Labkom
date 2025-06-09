@@ -253,3 +253,150 @@ p {
 .about .scroll {
     margin-bottom: 40px;
 }
+
+/* Page 3 */
+
+.masa {
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    padding: 34px 5vw 0 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.masa .title {
+    width: 100%;
+    max-width: 335px;
+    margin: 0 auto 0 auto;
+    height: auto;
+    position: static;
+    line-height: 1;
+}
+
+.masa .title h1 {
+    font-family: 'Cabinet';
+    font-size: 50px;
+    font-weight: 800;
+    color: #581F2B;
+    margin: 0;
+    padding: 0;
+}
+
+.masa .title h2 {
+    font-family: 'General Sans';
+    font-size: 35px;
+    font-weight: 400;
+    color: #9E9999;
+    margin: 0;
+    padding: 0;
+}
+
+.title .underline {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+}
+
+.title .highlight {
+    color: white;
+    background-color: #9E9999;
+    padding: 0 5px;
+}
+
+
+.timeline {
+    max-width: 1000px;
+    margin: 50px 0;
+    padding: 0;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background-color: #ccc;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 50%; /* vertical center of item */
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #581F2B;
+    border: 3px solid #ccc; /* circle border */
+    border-radius: 50%;
+    z-index: 3; /* above center line */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.content.image-left .timeline-image {
+    order: 1;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    padding-right: 20px;
+}
+
+.content.image-left .timeline-text {
+    order: 2;
+    text-align: left;
+}
+
+.content.image-right .timeline-image {
+    order: 2;
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    padding-left: 20px;
+}
+
+.content.image-right .timeline-text {
+    order: 1;
+    text-align: right;
+}
+
+.timeline-image img {
+    width: 148;
+    height: 161px;
+}
+
+.timeline-text {
+    width: 45%;
+    padding: 20px;
+}
+
+.timeline-text h3 {
+    font-family: 'General Sans';
+    font-size: 24px;
+    font-weight: 600;
+    color: #581F2B;
+}
+
+.timeline-text p {
+    font-family: 'Satoshi';
+    font-size: 12px;
+    font-weight: 400;
+    color: #9E9999;
+}
